@@ -1,7 +1,7 @@
 html
     head
         title
-            |Заголовок страницы
+            |Шаблон для портфолио/резюме
         link(rel="stylesheet", href="css/bootstrap.css")
         link(rel="stylesheet", href="css/bootstrap-theme.css")
         link(rel="stylesheet", href="css/bundle.css")
@@ -9,4 +9,14 @@ html
         script(src="js/bootstrap.js")
                 
     body
-        |2123
+        header
+            .header__top
+                .profile
+                    img(src="images/logo.png", alt="")
+                .FIO
+                    h2
+                        |Юрий Маратканов
+                .position
+                    h3
+                        |FrontEnd разработчик
+            nav
