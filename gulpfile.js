@@ -16,7 +16,7 @@ var gulp = require('gulp'),
 
 var path = {
     public: {
-        html:'public/',
+        html:'',
         js:'public/js/',
         css:'public/css/',
         img:'public/images/'
@@ -32,7 +32,7 @@ var path = {
 
     watch: {
         jade: 'private/*.jade',
-        html:'public/**/*.html',
+        html:'*.html',
         js: 'private/js/**/*.js',
         css: 'private/css/**/*.sass',
         img: 'private/images/**/*.*'
@@ -41,7 +41,7 @@ var path = {
 
 var config = {
     server: {
-        baseDir: './public'
+        baseDir: ''
     },
     tunnel: false,
     host: 'localhost',
@@ -56,7 +56,7 @@ gulp.task('jade', function() {
             locals: '',
             pretty: true
         }))
-        .pipe(gulp.dest('public/'))
+        .pipe(gulp.dest(''))
         .pipe(reload({stream:true}));
 });
 
