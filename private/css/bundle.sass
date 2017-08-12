@@ -1,30 +1,72 @@
 $profile-margin: 0px
+$FIO_position_color: #fff
+$Profile-font-weight: bold
+$Profile-text-shadow: 1px 1px 16px black, 0 0 3em black
+$menu-item-color: #000
 
 html
     font-size: 15px
     header
         display: block
         padding-top: 16px
+        background: url(../images/clouds2.jpg) no-repeat
+        background-position: 0% 46%
+        background-size: cover
 
         .header__top
             display: flex
             flex-direction: column
             align-items: center
+            margin-bottom: 20px
 
             .profile
 
                 img
                     border-radius: 50%
                     margin-bottom: 16px
+                    box-shadow: 0 0 2px 2px #fff
 
 
             .FIO
                 h2
                     font-size: 1.5rem
+                    font-weight: $Profile-font-weight
                     line-height: 1.7rem
                     margin: $profile-margin
+                    color: $FIO_position_color
+                    text-shadow: $Profile-text-shadow
             .position
                 h3
                     font-size: 1.2rem
+                    font-weight: $Profile-font-weight
                     line-height: 1.4rem
                     margin: $profile-margin
+                    color: $FIO_position_color
+                    text-shadow: $Profile-text-shadow
+nav
+    li
+        display: inline
+        padding: 1.2rem 1.2rem 0.9rem 1.2rem
+        border-bottom: 3px solid transparent
+        
+        &:hover
+            border-bottom: 3px solid #3f9fe2
+        a
+            font-size: 1rem
+            font-weight: bold
+            text-transform: uppercase
+            color: $menu-item-color
+            &:hover
+                text-decoration: none
+                color: $menu-item-color
+.main-menu
+    background: rgba(55, 118, 185, 0.21)
+    box-shadow: 0 3px 5px 0 rgba(134, 171, 183, 0.6)
+.menu-list
+    justify-content: center
+    flex-direction: row
+    display: flex
+
+@media screen and (min-width: 1200px)
+    header
+        // background-position: 0% 46% !important
