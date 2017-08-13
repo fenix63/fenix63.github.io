@@ -67,6 +67,30 @@ nav
     flex-direction: row
     display: flex
 
+.navbar
+    .navbar-nav
+        display: inline-block
+        float: none
+        vertical-align: middle
+
+        li
+            padding: 1.2rem 1.2rem 0.9rem
+            a
+                padding: 0
+                color: $menu-item-color
+
+                &:hover
+                    color: $menu-item-color                    
+
+    .navbar-collapse
+        text-align: center
+.navbar-default
+    background: rgba(55,118,185,.21)
+    box-shadow: 0 3px 5px 0 rgba(134,171,183,.6)
+    border: none
+
+ 
+
 @media screen and (min-width: 1200px)
     header
         // background-position: 0% 46% !important

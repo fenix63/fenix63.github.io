@@ -22,17 +22,43 @@ html
                 .position
                     h3
                         |FrontEnd разработчик
-            nav.main-menu
-                ul.menu-list
+            //- nav.main-menu
+            //-     ul.menu-list
+            //-         li
+            //-             a(href="#")
+            //-                 |Обо мне
+            //-         li
+            //-             a(href="#")
+            //-                 |Контакты
+            //-         li
+            //-             a(href="#")
+            //-                 |Портфолио
+            //-         li
+            //-             a(href="#")
+            //-                 |Пункт меню
+            nav.navbar.navbar-default
+              .container-fluid
+                
+                .navbar-header
+                  button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                    span.sr-only Toggle navigation
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+                  
+                
+                #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                  ul.nav.navbar-nav
                     li
-                        a(href="#")
-                            |Обо мне
+                      a(href='#')
+                        | Обо мне
+                        span.sr-only (current)
                     li
-                        a(href="#")
-                            |Контакты
+                      a(href='#') Контакты
                     li
-                        a(href="#")
-                            |Портфолио
+                      a(href='#') Портфолио
                     li
-                        a(href="#")
-                            |Пункт меню
+                      a(href='#') Пункт меню
+                    
+                  
+                 
