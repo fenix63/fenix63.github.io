@@ -4,6 +4,18 @@ $Profile-font-weight: bold
 $Profile-text-shadow: 1px 1px 16px black, 0 0 3em black
 $menu-item-color: #000
 
+@mixin spec_font
+    font:
+        weight: 700
+        size: 1rem
+    color: #000
+    line-height: 2rem
+    text-align: center
+    text-transform: uppercase
+
+
+
+
 html
     font-size: 15px
     header
@@ -89,7 +101,12 @@ nav
     box-shadow: 0 3px 5px 0 rgba(134,171,183,.6)
     border: none
 
- 
+.spec
+    .title
+        @include spec_font
+.experience
+    .title
+        @include spec_font
 
 @media screen and (min-width: 1200px)
     header
