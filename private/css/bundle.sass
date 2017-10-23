@@ -1,3 +1,10 @@
+@font-face
+    font-family: Firasansregular
+    src: url(../fonts/Firasansregular.ttf)
+
+
+
+
 $profile-margin: 0px
 $FIO_position_color: #fff
 $Profile-font-weight: bold
@@ -104,6 +111,18 @@ nav
 .spec
     .title
         @include spec_font
+    .skills
+        font-family: Firasansregular
+        font-size: 16px
+        font-weight: 500
+        margin-top: 30px
+        
+        ul
+            list-style-type: none
+            li
+                margin-top: 0.5rem
+                span
+                    font-weight: bold
 .experience
     .title
         @include spec_font
