@@ -133,7 +133,7 @@ nav
         @include spec_font
 
 .portfolio, .contacts
-    height: 400px
+    
     text-align: center
     margin-top: 50px
     line-height: 2rem;
@@ -142,6 +142,17 @@ nav
     h3
         font-size: 1rem
         font-weight: 700
+.cart-item
+    width: 80%
+    margin: 0 auto
+    border: 1px solid #000
+    height: 200px
+    border-radius: 1rem
+    padding: 10px
+    transition: box-shadow .7s
+
+    &:hover
+        box-shadow: -11px 21px 22px -3px #888888
 
 @media screen and (min-width: 1200px)
     header
