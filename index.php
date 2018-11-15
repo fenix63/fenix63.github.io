@@ -9,6 +9,13 @@
     <script src="public/js/jquery-3.1.1.js"></script>
     <script src="public/js/bootstrap.js"></script>
     <script src="public/js/functions.js"></script>
+
+    <script type="text/javascript">
+    var yaParams = {ip_adress: "<? echo $_SERVER['REMOTE_ADDR'];?>"};
+    //объявляем параметр ip_adress и записываем в него IP посетителя
+    </script> 
+
+
     <script type="text/javascript">
       (function (d, w, c) {
       (w[c] = w[c] || []).push(function() {
@@ -17,7 +24,8 @@
       id:45608283,
       clickmap:true,
       trackLinks:true,
-      accurateTrackBounce:true
+      accurateTrackBounce:true,
+      params: window.yaParams
       });
       } catch(e) { }
       });
