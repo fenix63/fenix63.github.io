@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+html
+    head
+
+        meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui")
+        title
+            |Шаблон для портфолио/резюме
+        link(rel="stylesheet", href="/css/bootstrap.css")
+        link(rel="stylesheet", href="/css/bootstrap-theme.css")
+        link(rel="stylesheet", href="/css/bundle.css")
+        link(rel="stylesheet", href="/css/style.css")
+
+
+        script(src="/js/jquery-3.1.1.min.js")
+        script(src="/js/bootstrap.min.js")
+        script(src="/js/functions.min.js")
+
+
+        script(type='text/javascript').
+            (function (d, w, c) {
+                (w[c] = w[c] || []).push(function() {
+                    try {
+                        w.yaCounter45608283 = new Ya.Metrika({
+                            id:45608283,
+                            clickmap:true,
+                            trackLinks:true,
+                            accurateTrackBounce:true
+                        });
+                    } catch(e) { }
+                });
+                var n = d.getElementsByTagName("script")[0],
+                    s = d.createElement("script"),
+                    f = function () { n.parentNode.insertBefore(s, n); };
+                s.type = "text/javascript";
+                s.async = true;
+                s.src = "https://mc.yandex.ru/metrika/watch.js";
+                if (w.opera == "[object Opera]") {
+                    d.addEventListener("DOMContentLoaded", f, false);
+                } else { f(); }
+            })(document, window, "yandex_metrika_callbacks");
+        noscript
+            div
+                img(src='https://mc.yandex.ru/watch/45608283', style='position:absolute; left:-9999px;', alt='')
+
+
+
+
+    body
+        header
+            .header__top
+                .profile
+                    img(src="/images/logo.png", alt="")
+                .FIO
+                    h2
+                        |Юрий Маратканов
+                .position
+                    h3
+                        |FrontEnd разработчик
+            nav.navbar.navbar-default
+                .container-fluid
+
+                    .navbar-header
+                        button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+                            span.sr-only Toggle navigation
+                            span.icon-bar
+                            span.icon-bar
+                            span.icon-bar
+
+
+                    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+                        ul.nav.navbar-nav
+                            li
+                                a(href='#')
+                                    | Обо мне
+                                    span.sr-only (current)
+                            li
+                                a(href='#') Контакты
+                            li
+                                a(href='#') Портфолио
+                            li
+                                a(href='https://togliatti.hh.ru/resume/ec023270ff024544bf0039ed1f364445467a33' target="_blank") Я на hh.ru
+        .container-fluid
+            .row
+                .col-lg-6.col-md-6.col-sm-6.col-xs-6.spec
+                    h3.title
+                        |Специализация
+                    .skills
+                        ul
+                            li
+                                |Базовые навыки программирования на PHP, C#
+                            li
+                                span Верстка
+                                |
+                                |HTML+CSS
+                            li
+                                |Для
+                                span
+                                    |
+                                    |адаптивной верстки
+                                    |
+                                |применяю Bootstrap3, Foundation, UI Kit, Media Queries
+                            li
+                                |Умею пользоваться JS, jQuery (работа с элементами, свойствами, атрибутами), также кастомизация сторонних jQuery плагинов
+                            li
+                                span
+                                    |Базы данных:
+                                |
+                                |MySQL, MS SQL-Server - умею составлять запросы, в том числе и сложные, из нескольких таблиц
+                            li
+                                span
+                                    |CMS:
+                                |
+                                |WordPress, 1C-Bitrix (в процессе изучения) - могу натягивать верстку, делать правки в верстке, кастомизировать встроенные компоненты (Bitrix) под конкретные задачи
+                            li
+                                span
+                                    |Шаблонизаторы:
+                                |
+                                |Jade
+                            li
+                                span
+                                    |Препроцессоры:
+                                |
+                                |SASS
+                            li
+                                span
+                                    |Внешние API:
+                                |
+                                |AmoCRM API, Контур-Фокус API, API Яндекс-карт, API Google-карт. Умею работать с Google-Script.
+                            li
+                                span
+                                    |Сборка проектов:
+                                |
+                                |Gulp 4
+                            li
+                                span
+                                    |Системы контроля версий:
+                                |
+                                |Git
+                            li
+                                span
+                                    |Прочее:
+                                |
+                                |Базовые навыки работы с Node.js и npm, Умею пользоваться Web Browser Tools, технический Английский
+                .col-lg-6.col-md-6.col-sm-6.col-xs-6.experience
+                    h3.title
+                        |Опыт работы
+            .row
+                .col-lg-12.col-md-12.col-sm-12.col-xs-12.portfolio
+                    h3
+                        |Портфолио
+                .col-lg-3.col-md-6.col-sm-6.col-xs-12
+                    .cart-item
+                        |Первая карточка
+                .col-lg-3.col-md-6.col-sm-6.col-xs-12
+                    .cart-item
+                        |Вторая карточка
+                .col-lg-3.col-md-6.col-sm-6.col-xs-12
+                    .cart-item
+                        |Третья карточка
+                .col-lg-3.col-md-6.col-sm-6.col-xs-12
+                    .cart-item
+                        |Четвертая карточка
+
+            .row.contacts
+                .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                    .contact-item
+                        img(src="/images/vk_icon.svg", alt="")
+                        a(href="https://vk.com/youran_88" target="_blank")
+                            |Вконтакте
+                .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                    .contact-item
+                        |email: fenix_63@mail.ru
+                .col-lg-4.col-md-4.col-sm-4.col-xs-12
+                    .contact-item
+                        |Skype: fenix198824
+

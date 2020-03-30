@@ -1,0 +1,368 @@
+//- Invalid
+a(href='text ' + title) Link
+//- Invalid under `'aggressive'`
+a(href=text + title) Link
+a(href=num1 + num2) Link
+
+
+//- Invalid
+a(href='text #{title}') Link
+//- Valid
+a(href='text \#{title}') Link
+a(href='text \\#{title}') Link
+
+//- Invalid
+a(href=`https://${site}`) Link
+
+//- Valid
+a(href=getLink(`https://${site}`)) Link
+
+
+//- Invalid
+a(href=getLink(`https://${site}`)) Link
+
+//- Invalid
+p: strong text
+table: tr: td text
+
+//- Invalid
+span(class='foo')
+
+//- Valid
+span.foo
+
+
+//- Invalid
+input.class(type='text')
+
+//- Valid
+input(type='text').class
+
+
+//- Invalid
+input.class#id(type='text')
+
+//- Valid
+input#id.class(type='text')
+
+
+//- Invalid
+.class
+
+//- Valid
+div(class='class')
+
+
+//- Invalid
+div(a='a' a='b')
+#id(id='id')
+
+//- Valid
+div(class='a', class='b')
+.class(class='class')
+
+
+//- Invalid
+<strong>html text</strong>
+p this is <strong>html</strong> text
+
+
+//- Invalid
+span(id='foo')
+
+//- Valid
+span#id
+
+
+//- Invalid
+input#id(type='text')
+
+//- Valid
+input(type='text')#id
+
+
+//- Invalid
+#id
+
+//- Valid
+div(id='id')
+
+
+//- Invalid
+mixin myMixin(arg)
+
+//- Valid mixin call
++myMixin(arg)
+
+//- Valid mixin call with block attached
++myMixin(arg)
+p Hey
+
+//- Valid mixin definition
+mixin myMixin(arg)
+p Hey
+
+
+//- Invalid
+div
+
+
+div
+
+//- Valid
+div
+
+div
+
+
+//- Invalid
+p= 'This code is <escaped>'
+p!=  'This code is <strong>not</strong> escaped'
+
+//- Valid
+p='This code is <escaped>'
+p!='This code is <strong>not</strong> escaped'
+
+
+//- Invalid
+- var a = 'This is code'
+
+//- Valid
+-var a = 'This is code'
+
+
+//- Invalid
+input( type='text' name='name' value='value' )
+
+//- Valid
+input(type='text' name='name' value='value')
+
+
+//- Invalid
+span(a='a')
+div(B='b')
+
+
+
+
+
+//- Invalid
+img(title='title')
+
+
+//- Invalid
+b Bold text
+i Italic text
+
+
+//- Invalid
+h1= title + 'text'
+//- Invalid under `'aggressive'`
+h1= title + text
+
+//- Invalid
+h1 #{title} text
+
+
+//- Invalid
+| #[strong html] text
+p #[strong html] text
+
+//- Invalid
+h1= `${title} text`
+
+//- Valid
+h1= translate(`${title} text`)
+
+//- Invalid
+h1= translate(`${title} text`)
+
+
+//- Invalid
+input(type='text').class
+
+//- Valid
+input.class(type='text')
+
+
+//- Invalid
+input#id.class(type='text')
+
+//- Valid
+input.class#id(type='text')
+
+//- Invalid
+input(type='text')#id
+
+//- Valid
+input#id(type='text')
+
+//- Invalid
+div(Class='class')
+
+//- Valid
+div(class='class')
+
+//- Invalid
+Div(class='class')
+
+//- Valid
+div(class='class')
+
+
+//- Invalid
+p='This code is <escaped>'
+p!=  'This code is <strong>not</strong> escaped'
+
+//- Valid
+p= 'This code is <escaped>'
+p!= 'This code is <strong>not</strong> escaped'
+
+//- Invalid
+-var a = 'This is code'
+
+//- Valid
+- var a = 'This is code'
+
+//- Invalid
+input(type='text' name='name' value='value')
+
+//- Valid
+input( type='text' name='name' value='value' )
+
+
+//- Invalid
+img(src='src')
+
+//- Valid
+img(src='src' alt='alt')
+
+
+//- Invalid
+if true == false
+if true != false
+
+//- Valid
+if true === false
+if true !== false
+
+
+//- Invalid
+input(type="text" name="name" value="value")
+
+//- Valid
+input(type='text' name='name' value='value')
+
+
+//- Invalid
+input(type='text' name='name' value='value')
+div
+input(type='text'
+, name='name'
+, value='value'
+)
+
+//- Valid
+input(type='text', name='name', value='value')
+
+
+//- Invalid
+input(type='text', name='name', value='value')
+div
+input(type='text'
+, name='name'
+, value='value'
+)
+
+//- Valid
+input(type='text' name='name' value='value')
+div
+input(type='text'
+name='name'
+value='value'
+)
+
+
+//- Invalid
+div.class
+div#id
+div.class(class='class')
+
+//- Valid
+.class
+#id
+.class(class='class')
+
+
+//- Invalid
+include a
+include a.jade
+extends a
+extends a.txt
+extends a.jade
+
+//- Valid
+include a.txt
+include a.pug
+extends a.pug
+
+
+//- Invalid
+div
+<TAB>div
+
+//- Valid
+div
+<SPACE><SPACE>div
+
+
+//- Invalid
+div
+<SPACE><SPACE>div
+
+//- Valid
+div
+<TAB>div
+
+//- Invalid
+div(class='class')<CRLF>
+.button
+
+//- Valid
+div(class='class')<LF>
+.button
+
+//- Invalid
+area/
+link/
+
+//- Valid
+area
+link
+foo/
+
+doctype xml
+area/
+
+
+//- Invalid
+h1= `${title}`
+
+//- Valid
+h1= title
+
+
+//- Invalid
+h1= `title`
+
+//- Valid
+h1= 'title'
+
+
+//- Invalid
+h1= `title` + `text`
+h1= `title` + variable
+
+//- Valid
+h1= `titletext`
+h1= `title${variable}`
